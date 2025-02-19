@@ -1,0 +1,260 @@
+/* Variáveis de cores */
+:root {
+    --primary-blue: #6b9dc9;
+    --light-blue: #e6f3ff;
+    --lighter-blue: #f0f7ff;
+    --dark-blue: #4b7baa;
+    --white: #ffffff;
+    --off-white: #fafbfc;
+    --text-dark: #2c3e50;
+    --text-light: #6a89a8;
+    --border-color: #dbe9f6;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.6;
+}
+
+/* Container principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(107, 157, 201, 0.08);
+}
+
+/* Cabeçalhos */
+h2 {
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+/* Formulários */
+form {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(107, 157, 201, 0.08);
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    color: var(--text-light);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--text-dark);
+    transition: all 0.2s ease;
+    font-size: 0.95em;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    background-color: var(--lighter-blue);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Botões */
+button, .add-btn {
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, .add-btn:hover {
+    background: var(--dark-blue);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(107, 157, 201, 0.2);
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 25px;
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(107, 157, 201, 0.08);
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--light-blue);
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95em;
+    letter-spacing: 0.3px;
+}
+
+td {
+    border-bottom: 1px solid var(--border-color);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: var(--lighter-blue);
+}
+
+/* Status da tarefa */
+.status {
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.9em;
+    display: inline-block;
+}
+
+.status-pendente {
+    background-color: #fff5e6;
+    color: #b37400;
+}
+
+.status-andamento {
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+}
+
+.status-concluida {
+    background-color: #e6f6ef;
+    color: #1a7f4e;
+}
+
+/* Botões de ação */
+.edit-btn, .delete-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-right: 8px;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.edit-btn {
+    background: var(--light-blue);
+    color: var(--dark-blue);
+}
+
+.delete-btn {
+    background: #ffe8e8;
+    color: #d64545;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(107, 157, 201, 0.15);
+}
+
+/* Links */
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--dark-blue);
+}
+
+/* Mensagens de feedback */
+.message {
+    padding: 16px 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.message-success {
+    background-color: #e6f6ef;
+    color: #1a7f4e;
+}
+
+.message-error {
+    background-color: #ffe8e8;
+    color: #d64545;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 12px 16px;
+    }
+
+    .edit-btn, .delete-btn {
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
+
+    button, .add-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+} 
