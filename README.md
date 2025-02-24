@@ -2,23 +2,23 @@
 projeto de dispositivos moveis II
 
 
-Página Principal (index.php)
+Página Principal 
 Exibe uma tabela com todos os usuários e suas respectivas tarefas
 Mostra informações como nome, email, telefone, detalhes da tarefa e status
 Permite acessar as operações de editar e excluir
 
-Criar (create.php)
+Criar
 Formulário para adicionar novo usuário com sua tarefa
 Coleta informações pessoais (nome, email, telefone)
 Registra detalhes da tarefa (título, descrição, data de vencimento)
 Define o status da tarefa (pendente, em andamento, concluída)
 
-Editar (edit.php)
+Editar
 Permite modificar informações existentes de usuários e tarefas
 Mantém os mesmos campos do formulário de criação
 Carrega os dados atuais para edição
 
-Excluir (delete.php)
+Excluir
 Solicita confirmação antes de excluir
 Remove o usuário e sua tarefa do banco de dados
 5. Configuração (config.php)
